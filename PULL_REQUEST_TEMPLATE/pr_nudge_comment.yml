@@ -1,0 +1,26 @@
+name: PR Nudge Comment
+on:
+  pull_request_target:
+    types: [opened]
+
+jobs:
+  nudge:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+    steps:
+      - uses: actions/github-script@v7
+        with:
+          script: |
+            const pr = context.payload.pull_request;
+            const body = (pr.body || "").toLowerCase();
+            const must = ["uppfyllir atriðið matskvarða", "er textinn læsilegur og réttur", "skrifaðu hvað má betur fara"];
+            const missing = must.filter(k => !body.includes(k));
+            if (missing.length === 0) return;
+
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: pr.number,
+              body: `👋 Hæ ${pr.user.login}!\nVinsamlegast fylltu út PR formið alveg.\nVantar: **${missing.join(", ")}**.\nÞetta er nauðsynlegt svo PR geti farið í gegn. 🙏`
+            });
