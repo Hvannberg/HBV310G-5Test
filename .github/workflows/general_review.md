@@ -24,3 +24,4 @@
 
 > 💡 Þegar þú sendir PR, mun “PR Quality Check” keyra og athuga að svör séu fyllt út áður en má sameina (merge).
 
+
