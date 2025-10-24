@@ -1,4 +1,4 @@
-test pr 
+test 1 
 > 💡 **ATHUGIÐ:**  
 > Þetta sniðmát (template) inniheldur sjálfvirkar gæðaskoðanir (GitHub Actions) sem keyra þegar þú opnar **Pull Request (PR)**.  
 > Þær:
