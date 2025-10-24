@@ -1,4 +1,4 @@
-Byrja upp á nýtt 
+2 Byrja upp á nýtt 
 > 💡 **ATHUGIÐ:**  
 > Þetta sniðmát (template) inniheldur sjálfvirkar gæðaskoðanir (GitHub Actions) sem keyra þegar þú opnar **Pull Request (PR)**.  
 > Þær:
