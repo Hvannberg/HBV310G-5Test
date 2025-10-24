@@ -1,51 +1,26 @@
-name: Almennt gæðaform fyrir PR
-description: Stutt sjálfsmat á gæðum áður en PR er samþykkt.
-title: "[PR] "
-body:
-  - type: markdown
-    attributes:
-      value: |
-        #### Vinsamlegast svaraðu eftirfarandi áður en PR er samþykkt.
+# PR sjálfsmat – Verkefni 5
 
-  - type: dropdown
-    id: rubric
-    attributes:
-      label: Uppfyllir atriðið matskvarða með verkefninu?
-      description: Veldu mat á því hversu vel PR uppfyllir matskvarða.
-      options:
-        - Já
-        - Að hluta
-        - Nei
-    validations:
-      required: true
+**Uppfyllir atriðið matskvarða með verkefninu?**  
+- [ ] Já  
+- [ ] Að hluta  
+- [ ] Nei  
 
-  - type: dropdown
-    id: readability
-    attributes:
-      label: Er textinn læsilegur og réttur?
-      description: Læsileiki, stafsetning og nákvæmni.
-      options:
-        - Já
-        - Að hluta
-        - Nei
-    validations:
-      required: true
+**Er textinn læsilegur og réttur?**  
+- [ ] Já  
+- [ ] Að hluta  
+- [ ] Nei  
 
-  - type: textarea
-    id: improve
-    attributes:
-      label: Skrifaðu hvað má betur fara
-      description: Vertu afdráttarlaus; nefndu að minnsta kosti tvö atriði (t.d. prófanir, skjöl, mælingar, heiti, afmörkun).
-      placeholder: "1) ...\n2) ..."
-    validations:
-      required: true
+**Skrifaðu hvað má betur fara:**  
+> Dæmi: Útskýringar gætu verið ítarlegri, mætti bæta prófunarskilum o.s.frv.
 
-  - type: checkboxes
-    id: ack
-    attributes:
-      label: Staðfestingarlisti
-      options:
-        - label: Ég hef uppfært skjöl (README/docs/CHANGELOG) ef við á
-          required: false
-        - label: Tengingar í issues/projects eru til staðar
-          required: false
+---
+
+### Athugaðu áður en þú sendir PR:
+- [ ] Ég hef svarað öllum spurningum hér að ofan  
+- [ ] Skjalið er uppfært ef breytingar hafa áhrif á kröfur eða hönnun  
+- [ ] Sjálfvirku prófin keyra án villna  
+
+---
+
+> 💡 Þegar þú sendir PR, mun “PR Quality Check” keyra og athuga að svör séu fyllt út áður en má sameina (merge).
+
